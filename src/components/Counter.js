@@ -8,7 +8,8 @@ const Counter = () => {
   const [increaseBy, setIncreaseBy] = useState(2);
   const counter = useSelector(state => state.counter.counter);
   const toggleCounter = useSelector(state => state.counter.toggleCounter);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
 
   const toggleCounterHandler = () => {
     dispatch(counterActions.toggleCounter());
